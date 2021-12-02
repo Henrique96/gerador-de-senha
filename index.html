@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Gerador de Senha </title>
+        <link rel="stylesheet" href="estilo.css">
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <div class="pw-container">
+            <div class="pw-header">
+                <div class="pw">
+                    <span id="pw">l823Zs78#Css09@</span>
+                    <button id="copy">Copiar</button>
+                </div>
+            </div>
+            <div class="pw-body">
+                <div class="form-control">
+                    Quantidade de Caracteres
+                    <input id="len" value="15" type="number" min="2" max="30">
+                </div>
+                <div class="form-control">
+                    Contém letras maiúsculas
+                    <input id="upper" type="checkbox">
+                </div>
+                <div class="form-control">
+                    Contém letras minúsculas
+                    <input id="lower" type="checkbox">
+                </div>
+                <div class="form-control">
+                    Contém Números
+                    <input id="number" type="checkbox">
+                </div>
+                <div class="form-control">
+                    Contém Símbolos
+                    <input id="symbol" type="checkbox">
+                </div>
+                <button class="generate" id="generate">
+                    Gerar senha
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
