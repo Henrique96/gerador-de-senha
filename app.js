@@ -1,3 +1,5 @@
+// Variaveis
+
 const pwEl = document.getElementById("pw");
 const copyEl = document.getElementById("copy");
 const lenEl = document.getElementById("len");
@@ -7,16 +9,18 @@ const numberEl = document.getElementById("number");
 const symbolEl = document.getElementById("symbol");
 const generateEl = document.getElementById("generate");
 
+
 const upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerLetters = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "0123456789";
 const symbols = "!@#$%^&*()_+=";
 
+//Funções para retornar os caracteres aleatóriamente
 function getMinusculo() {
     return lowerLetters[Math.floor(Math.random() * lowerLetters.length)];
 }
 
-function getUppercase() {
+function getMaiusculo() {
     return upperLetters[Math.floor(Math.random() * upperLetters.length)];
 }
 
@@ -28,13 +32,15 @@ function getSymbol() {
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
+//Função para gerar a senha
 function generatePassword() {
+
     const len = lenEl.value;
 
     let password = "";
 
     if (upperEl.checked) {
-        password += getUppercase();
+        password += getMaiusculo();
     }
 
     if (lowerEl.checked) {
@@ -60,7 +66,7 @@ function generatePassword() {
 function generateX() {
     const xs = [];
     if (upperEl.checked) {
-        xs.push(getUppercase());
+        xs.push(getMaiusculo());
     }
 
     if (lowerEl.checked) {
@@ -95,5 +101,5 @@ copyEl.addEventListener("click", () => {
     textarea.select();
     document.execCommand("copy");
     textarea.remove();
-    alert("Password copied to clipboard");
+    alert("Senha copiada!");
 });
