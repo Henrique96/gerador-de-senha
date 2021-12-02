@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: lightgray;
+    background-color: gray;
     color: white;
     display: flex;
     align-items: center;
@@ -15,8 +15,19 @@ body {
     min-height: 100vh;
 }
 
+.assinatura {
+    color: lightgray;
+    padding: 8px;
+    margin: 8px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 10px;
+}
+
 .pw-container {
-    background-color: rgb(46, 12, 80);
+    background-color: #5890a8;
+    border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     min-width: 400px;
 }
@@ -26,12 +37,13 @@ body {
 }
 
 .pw {
-    background-color: rgb(69, 28, 109);
+    color: black;
+    background-color: lightgray;
     display: flex;
     font-size: 1.5rem;
     align-items: center;
-    height: 70px;
-    width: 100%;
+    height: 60px;
+    width: 98%;
     position: relative;
     padding: 1rem;
     overflow: auto;
@@ -70,9 +82,10 @@ body {
 }
 
 .generate {
-    background-color: #ecb602;
+    color: black;
+    background-color: #afc736;
     border: none;
-    color: rebeccapurple;
+    border-radius: 8px;
     cursor: pointer;
     display: block;
     font-size: 1.5rem;
