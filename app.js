@@ -9,7 +9,7 @@ const numberEl = document.getElementById("number");
 const symbolEl = document.getElementById("symbol");
 const generateEl = document.getElementById("generate");
 
-
+// Maiúsculos, minúsculos, Números e Símbolos
 const upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerLetters = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "0123456789";
@@ -24,11 +24,11 @@ function getMaiusculo() {
     return upperLetters[Math.floor(Math.random() * upperLetters.length)];
 }
 
-function getNumber() {
+function getNumero() {
     return numbers[Math.floor(Math.random() * numbers.length)];
 }
 
-function getSymbol() {
+function getSimbolo() {
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
@@ -38,7 +38,7 @@ function generatePassword() {
     const len = lenEl.value;
 
     let password = "";
-
+    // Condicionais para os checkboxes
     if (upperEl.checked) {
         password += getMaiusculo();
     }
@@ -48,11 +48,11 @@ function generatePassword() {
     }
 
     if (numberEl.checked) {
-        password += getNumber();
+        password += getNumero();
     }
 
     if (symbolEl.checked) {
-        password += getSymbol();
+        password += getSimbolo();
     }
 
     for (let i = password.length; i < len; i++) {
@@ -74,11 +74,11 @@ function generateX() {
     }
 
     if (numberEl.checked) {
-        xs.push(getNumber());
+        xs.push(getNumero());
     }
 
     if (symbolEl.checked) {
-        xs.push(getSymbol());
+        xs.push(getSimbolo());
     }
 
     if (xs.length === 0) return "";
@@ -95,7 +95,7 @@ copyEl.addEventListener("click", () => {
     if (!password) {
         return;
     }
-
+// Comando copiar da Textarea
     textarea.value = password;
     document.body.appendChild(textarea);
     textarea.select();
